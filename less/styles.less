@@ -1,0 +1,33 @@
+/*******************
+    To Compile:
+                Install HomeBrew:         $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+                Install node:             $ brew install node
+                Install less:             $ nmp install -g less
+                Run from project folder:  $ lessc less/styles.less > css/styles.css
+                For Minified:             $ lessc -x less/styles.less > css/styles.css OR $ lessc --clean-css less/styles.less > css/styles.css
+********************/
+
+@domain: "CDN.URL"; //Your CDN url for better performance (use with url())
+@font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+@mainColor: #ce0c21;
+
+@import 'bootstrap/bootstrap.less';
+@import 'spinner.less';
+
+//@import url("@{domain}/scripts/plugins/rs-plugin/css/settings.css");
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10  */
+  -o-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: default;
+  }
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>baseFront</title>
+        <meta name="keywords" content="YoniGo, HTML5, CSS3, responsive, Mobile Development, Web development" />
+        <meta name="author" content="Yoni Goyhman" />
+        <meta name="robots" content="index follow"/>
+        <meta name="description" content="YoniGo - Cross Platform Web & Mobile Application Development" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="GOOGLEBOT" content="index follow"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="fragment" content="!" />
+
+        <link rel="shortcut icon" href="client/images/icons/favicon.png" />
+
+        <!--link rel="apple-touch-icon-precomposed" href="images/icons/icon.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/icon@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/icon-72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/icon-72@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/icon-60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/icon-60@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/icon-76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/icon-76@2x.png" /-->
+
+        <link rel="stylesheet" media="screen" href="css/main.css"/>
+        <!--link rel="stylesheet" media="screen" href="css/styles.css"/-->
+        <link rel="stylesheet/less" media="screen" type="text/less" href="less/styles.less"/>
+
+        <!--[if lt IE 9]>
+        <script src="scripts/libs//plugins/html5shiv.js"></script>
+        <script src="scripts/libs//plugins/selectivizr.js"></script>
+        <![endif]-->
+
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <!--script data-main="scripts/dist/main" src="scripts/libs/require.js"></script-->
+    </head>
+    <body ng-controller="mainCtrl" ontouchstart="" ng-init="init()">
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ui-view></div>
+
+        <div class="cover" ng-show="appData.showSpinner">
+            <div spinner text="appData.spinnerText"></div>
+        </div>
+
+    </body>
+</html>
+
